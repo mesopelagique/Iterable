@@ -55,7 +55,7 @@ ASSERT:C1129(OB Entries:C1720($obj).length=$cpt)
 * Object value
 **/
 
-$it:=it .ObjectEntryIterator.new($obj)
+$it:=it .ObjectValueIterator.new($obj)
 
 $cpt:=0
 While ($it.hasNext())
@@ -63,7 +63,7 @@ While ($it.hasNext())
 	$cpt:=$cpt+1
 End while 
 
-ASSERT:C1129(OB Entries:C1720($obj).length=$cpt)
+ASSERT:C1129(OB Values:C1720($obj).length=$cpt)
 
 /**
 * Custom object value
