@@ -29,3 +29,8 @@ There is different type of iterator provided, to traverse a collection, an objec
 |it.IterableIterator|Iterate on object which implements two formula: `length()->int` and `getValueAt(index)->value`|
 
 See some usage in [tests](https://github.com/mesopelagique/Iterable/blob/master/Project/Sources/Methods/test_iterator.4dm)
+
+
+## Go further
+
+If a class have a function `iterator` which return an `Iterator` instance, we could imagine `For each` language keyword work with it, instead of keys browsing
