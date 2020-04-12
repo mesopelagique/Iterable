@@ -1,15 +1,46 @@
 //%attributes = {}
 C_OBJECT:C1216($it)
+C_LONGINT:C283($cpt)
+C_VARIANT:C1683($value)
+C_COLLECTION:C1488($col)
+
+/**
+* range
+**/
+
+$it:=it .Range.new(1;7)
+$cpt:=0
+While ($it.hasNext())
+	
+	$value:=$it.next()
+	$cpt:=$cpt+1
+End while 
+ASSERT:C1129(7=$cpt)
+
+ASSERT:C1129(New collection:C1472(1;2;3;4;5;6;7).equal($it.toCollection()))
+
+/**
+* String
+**/
+
+$it:=it .StringIterator.new("Hello World")
+$cpt:=0
+While ($it.hasNext())
+	
+	$value:=$it.next()
+	$cpt:=$cpt+1
+End while 
+ASSERT:C1129(Length:C16("Hello World")=$cpt)
+
+ASSERT:C1129(New collection:C1472("H";"e";"l";"l";"o";" ";"W";"o";"r";"l";"d").equal(it .StringIterator.new("Hello World").toCollection()))
 
 /**
 * Object collection
 **/
-
-C_COLLECTION:C1488($col)
 $col:=New collection:C1472("1";"2";"3";"4";"5";"6";"7")
+
 $it:=it .CollectionIterator.new($col)
 
-C_LONGINT:C283($cpt)
 $cpt:=0
 While ($it.hasNext())
 	
@@ -63,7 +94,7 @@ While ($it.hasNext())
 	$cpt:=$cpt+1
 End while 
 
-ASSERT:C1129(OB Values:C1720($obj).length=$cpt)
+ASSERT:C1129(OB Entries:C1720($obj).length=$cpt)
 
 /**
 * Custom object value

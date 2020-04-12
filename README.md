@@ -1,22 +1,51 @@
-# Iterable
-Iteration classes for object instance, collection and custom object
+﻿# Iterable
+Iteration classes for string, range, object instance, collection and custom object
 
 ## Pattern
 
 [Iterator pattern](https://en.wikipedia.org/wiki/Iterator_pattern)
 > In object-oriented programming, the iterator pattern is a design pattern in which an iterator is used to traverse a container and access the container's elements. The iterator pattern decouples algorithms from containers; in some cases, algorithms are necessarily container-specific and thus cannot be decoupled.
 
-### In 4d using iterator provided by this component
+### In 4D using iterator provided by this component
 
 ```4d
 While ($it.hasNext())
-	$aValue:=$it.next()
-  
+  $aValue:=$it.next()
+  // do something
 End while 
 ````
 
 ## Usage
 
+You can iterate over different type using the same way
+
+### Range
+
+Iterate over a range of numeric
+
+```4d
+$it:=it .Range.new(1;7)
+While ($it.hasNext())
+	$value:=$it.next() //1, then 2, ..., until 7
+
+End while 
+```
+
+```4d
+it .Range.new(1;7).toCollection() // New collection(1;2;3;4;5;6;7)
+```
+
+### String
+
+Iterate over string characters, transform it to collection
+
+```4d
+it .StringIterator.new("Hello World").toCollection() // New collection("H";"e";"l";"l";"o";" ";"W";"o";"r";"l";"d")
+```
+
+eq. of `[..."Hello World"]` in some languages
+
+### Collection & Selection
 There is different type of iterator provided, to traverse a collection, an object keys, or values or entries or even custom algorithms.
 
 |Type|Description|
@@ -26,10 +55,14 @@ There is different type of iterator provided, to traverse a collection, an objec
 |it.ObjectEntryIterator|Iterate over an object entries collection|
 |it.ObjectKeyIterator|Iterate over an object keys collection|
 |it.ObjectValueIterator|Iterate over an object values collection|
-|it.IterableIterator|Iterate on object which implements two formula: `length()->int` and `getValueAt(index)->value`|
 
 See some usage in [tests](https://github.com/mesopelagique/Iterable/blob/master/Project/Sources/Methods/test_iterator.4dm)
 
+### Formula
+
+|Type|Description|
+|---|---|
+|it.IterableIterator|Iterate on object which implements two formula: `length()->int` and `getValueAt(index)->value`|
 
 ## Go further
 
