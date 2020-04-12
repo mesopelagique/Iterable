@@ -24,8 +24,8 @@ There is different type of iterator provided, to traverse a collection, an objec
 |it.CollectionIterator|Iterate over a collection|
 |it.SelectionIterator|Iterate over a selection|
 |it.ObjectEntryIterator|Iterate over an object entries collection|
-|it.ObjectKeyIterator|Iterate over an object keys collection||
-|it.ObjectValueIterator|Iterate over an object values collection||
+|it.ObjectKeyIterator|Iterate over an object keys collection|
+|it.ObjectValueIterator|Iterate over an object values collection|
 |it.IterableIterator|Iterate on object which implements two formula: `length()->int` and `getValueAt(index)->value`|
 
 See some usage in [tests](https://github.com/mesopelagique/Iterable/blob/master/Project/Sources/Methods/test_iterator.4dm)
