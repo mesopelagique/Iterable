@@ -1,4 +1,6 @@
 ﻿# Iterable
+[![language][code-shield]][code-url] [![language-top][code-top]][code-url] ![code-size][code-size] [![release][release-shield]][release-url] [![license][license-shield]][license-url] [![discord][discord-shield]][discord-url]
+
 Iteration classes for string, range, object instance, collection and custom object
 
 ## Pattern
@@ -67,3 +69,16 @@ See some usage in [tests](https://github.com/mesopelagique/Iterable/blob/master/
 ## Go further
 
 If a class have a function `iterator` which return an `Iterator` instance, we could imagine `For each` language keyword work with it, instead of keys browsing
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[code-shield]: https://img.shields.io/static/v1?label=language&message=4d&color=blue
+[code-top]: https://img.shields.io/github/languages/top/mesopelagique/JSONToCode.svg
+[code-size]: https://img.shields.io/github/languages/code-size/mesopelagique/JSONToCode.svg
+[code-url]: https://developer.4d.com/
+[release-shield]: https://img.shields.io/github/v/release/mesopelagique/JSONToCode
+[release-url]: https://github.com/mesopelagique/JSONToCode/releases/latest
+[license-shield]: https://img.shields.io/github/license/mesopelagique/JSONToCode
+[license-url]: LICENSE.md
+[discord-shield]: https://img.shields.io/badge/chat-discord-7289DA?logo=discord&style=flat
+[discord-url]: https://discord.gg/dVTqZHr
