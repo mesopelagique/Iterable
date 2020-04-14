@@ -68,6 +68,17 @@ See some usage in [tests](https://github.com/mesopelagique/Iterable/blob/master/
 
 ## Go further
 
+### 4D Tags
+
+You can use pass an iterable to `PROCESS 4D TAGS`, the template will be easier to read
+
+```4d
+<!--#4DLOOP ($1.hasNext())-->
+<!--#4DEVAL $value:=$1.next()-->
+<!--#4DENDLOOP-->
+```
+
+### language features?
 If a class have a function `iterator` which return an `Iterator` instance, we could imagine `For each` language keyword work with it, instead of keys browsing
 
 <!-- MARKDOWN LINKS & IMAGES -->
